@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .subject {
+            margin: 20px 0;
+            cursor: pointer;
+            font-size: 20px;
+            color: #007bff;
+            text-decoration: underline;
+        }
+        .subject:hover {
+            color: #0056b3;
+        }
+        .buttons {
+            display: none;
+            margin: 10px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function toggleButtons(subjectId) {
+            const buttons = document.getElementById(subjectId);
+            buttons.style.display = buttons.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Study Website</h1>
+    <p>Click on a subject to view study resources.</p>
+
+    <div>
+        <div class="subject" onclick="toggleButtons('m3')">M3</div>
+        <div id="m3" class="buttons">
+            <a href="#" class="button">PYQ</a>
+            <a href="#" class="button">Notes</a>
+        </div>
+
+        <div class="subject" onclick="toggleButtons('datastructures')">Data Structures</div>
+        <div id="datastructures" class="buttons">
+            <a href="#" class="button">PYQ</a>
+            <a href="#" class="button">Notes</a>
+        </div>
+
+        <div class="subject" onclick="toggleButtons('elx')">ELX</div>
+        <div id="elx" class="buttons">
+            <a href="#" class="button">PYQ</a>
+            <a href="#" class="button">Notes</a>
+        </div>
+
+        <div class="subject" onclick="toggleButtons('elc')">ELC</div>
+        <div id="elc" class="buttons">
+            <a href="#" class="button">PYQ</a>
+            <a href="#" class="button">Notes</a>
+        </div>
+
+        <div class="subject" onclick="toggleButtons('digitalcircuits')">Digital Circuits</div>
+        <div id="digitalcircuits" class="buttons">
+            <a href="#" class="button">PYQ</a>
+            <a href="#" class="button">Notes</a>
+        </div>
+    </div>
+</body>
+</html>
